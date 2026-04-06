@@ -1,5 +1,5 @@
 CM Metric — From Clausius–Mossotti to Schwarzschild
-Paper: Singh 2026j
+Paper: Singh 2026j (V2: 6 April 2026)
 Author: Mandeep Singh
 ORCID: 0009-0003-7176-2395
 Zenodo DOI: 10.5281/zenodo.19425285
@@ -7,11 +7,9 @@ The Formula
 ds² = W^(1/3) c²dt² − W^(−1/3)(dr² + r²dΩ²)
 
 W = (1 − β²)/(1 + 2β²)      β² = 2GM/(rc²)
-OE = 1 − W = 3β²/(1 + 2β²)   OE + W = 1 (always)
-Three steps. Zero parameters. Clausius–Mossotti (1879) → Schwarzschild (1916).
-W(r) = CM compression function (from 1879 dielectric theory)
-W^(1/3) = per-dimension share (D = 3 spatial dimensions)
-Assign to time = gravity affects all dimensions equally
+OE = 1 − W = 3β²/(1 + 2β²)  OE + W = 1 (always)
+Three steps. Zero parameters.
+Clausius–Mossotti (1879) → Schwarzschild (1916).
 Results Summary
 Weak Field: 6/6 Classical Tests PASS (CM = GR)
 #
@@ -87,107 +85,58 @@ f_GR
 0.828 f_GR
 −17.2%
 LIGO
-EHT Shadow Comparison
-Black Hole
-GR
+Rotation (V2 — Section 4.5)
+Result
 CM
-Observed
+GR
 Status
-M87*
-39.7 μas
-43.6 μas
-42 ± 3 μas
-✅ CM within error
-SgrA*
-50.7 μas
-55.7 μas
-48.7 ± 7 μas
-⚠️ Marginal
-Key Physics
-Why W^(1/3)?
-  W = total 3D compression (Clausius–Mossotti)
-  W^(1/3) = share per dimension (depolarisation factor N = 1/D)
-  Time gets same share → g_tt = W^(1/3) ≈ 1 − 2GM/(rc²)
-  = Schwarzschild at 1PN. Zero parameters.
-
-Why 2/3 became 1?
-  L_dyn (paper 2026i): space only → 4π (sphere) → 2/3 × GR
-  CM metric (this paper): space + time → 6π (sphere + circle) → 1 × GR
-  Missing 1/3 = time dimension = W^(1/3) on g_tt
-
-OE form:
-  g_tt = (1 − OE)^(1/3)
-  Time dilation = OE/3 = one dimension's share of orbital emptiness
-Connection to Framework
-Layer
-Paper
-Formula
-Key Result
-1. Foundation
-2026a
-OE + W = 1
-Complementarity
-2. Cosmology
-2026a–b
-Ω_DE = OE(β_cosmic)
-H₀ = 70.05 km/s/Mpc
-3. Nuclear
-2026d–e
-f = 3/4 (proton horizon)
-μ_p/μ_n = −1.456
-4. Static
-2026h
-L = OE − W
-Action S = nh
-5. Dynamics
-2026i
-L_dyn = T_OE + V/W
-+2/3 × GR, universal
-6. Spacetime
-2026j
-ds² = W^(1/3)c²dt² − ...
-Full GR + predictions
+Frame dragging (slow)
+ω = 2GJ/(c²r³)
+ω = 2GJ/(c²r³)
+✅ Identical
+Hidden symmetry: ν'+λ'
+= 0 (exact)
+≠ 0 (generally)
+CM special!
+g_tt × g_rr
+= 1 (exact)
+≠ 1 (generally)
+CM special!
+Gravity Probe B
+37 mas/yr
+37 mas/yr
+✅ CM = GR
+Event horizon (spinning)
+ABSENT (Δ>0)
+Present (Kerr)
+🔮 Prediction!
+GW echoes
+Predicted
+Not expected
+🔮 LIGO O5 test
 Files in This Folder
 File
 Description
 Singh_2026j_COMPLETE.html
-Full paper (8 chapters, 23 SVGs, 23 references)
+Full paper (8 chapters + §4.5 rotation)
 cm_verify_all.py
-Master verification: 29 tests, every number checked
+Master verification: 36 tests (V2)
+cm_kerr_analysis.py
+Rotation analysis: slow + full, no-horizon prediction
 cm_metric_12tests.py
-All 12 tests in one script
+All 12 static tests
 cm_photon_shadow_isco.py
-Photon sphere + shadow + ISCO computation
+Photon sphere + shadow + ISCO
 cm_mercury_binet.py
-Mercury precession (Binet equation, λ=3)
+Mercury precession (12 systems)
 README.md
 This file
 How to Verify
-import numpy as np
+# Run master verification (36 tests):
+python3 cm_verify_all.py
 
-c = 2.998e8; G = 6.674e-11; M_sun = 1.989e30
-
-def W(r, M):
-    b2 = 2*G*M/(r*c**2)
-    return (1-b2)/(1+2*b2)
-
-# Mercury: g_tt should equal Schwarzschild at 1PN
-r_merc = 5.79e10  # meters
-M = M_sun
-eps = G*M/(r_merc*c**2)
-
-gtt_CM = W(r_merc, M)**(1/3)
-gtt_GR = 1 - 2*eps
-
-print(f"g_tt(CM)  = {gtt_CM:.12f}")
-print(f"g_tt(GR)  = {gtt_GR:.12f}")
-print(f"Match: {abs(gtt_CM-gtt_GR):.2e}")
-# Output: Match: ~10⁻¹⁵ (identical at 1PN)
-
-# Photon sphere: 8ε² = 1 → r = √2 r_s
-eps_ph = 1/(2*np.sqrt(2))
-r_ph = 1/(2*eps_ph)  # in r_s units
-print(f"CM photon sphere = {r_ph:.4f} r_s (GR = 1.5000)")
+# Run rotation analysis:
+python3 cm_kerr_analysis.py
 Citation
 @article{Singh2026j,
   author  = {Singh, Mandeep},
@@ -195,15 +144,14 @@ Citation
   year    = {2026},
   journal = {Zenodo},
   doi     = {10.5281/zenodo.19425285},
-  note    = {Speed Gap Framework, Paper 2026j}
+  note    = {Speed Gap Framework, Paper 2026j V2}
 }
 Related Papers
-2026a — Speed Gap Framework (foundation): DOI: 10.5281/zenodo.19142702
-2026b v3 — Cosmic OE, Ω_m derivation: DOI: 10.5281/zenodo.19244123
-2026c — Deep Scaling Connections: DOI: 10.5281/zenodo.19227973
-2026d — Damru Geometry (nuclear): DOI: 10.5281/zenodo.19313279
-2026e — Guru Vortex (magnetic moments): DOI: 10.5281/zenodo.19332481
-2026h — Unified Lagrangian L = OE − W: DOI: 10.5281/zenodo.19400730
-2026i — Dynamical OE Lagrangian: DOI: 10.5281/zenodo.19414588
+2026a — Speed Gap Framework: DOI: 10.5281/zenodo.19142702
+2026b v3 — Cosmic OE: DOI: 10.5281/zenodo.19244123
+2026d — Damru Geometry: DOI: 10.5281/zenodo.19313279
+2026e — Guru Vortex: DOI: 10.5281/zenodo.19332481
+2026h — Unified Lagrangian: DOI: 10.5281/zenodo.19400730
+2026i — Dynamical Lagrangian: DOI: 10.5281/zenodo.19414588
 Mandeep Singh | Haryana, India | April 2026
-"145 years. Zero parameters. Atom to black hole."
+"145 years. Zero parameters. Atom to black hole. No horizon."
