@@ -1,0 +1,21 @@
+# ═══════════════════════════════════════════════════════════
+#  Speed Gap V4 — Python Requirements
+#  For exact reproducibility of H₀ = 70.05 result
+# ═══════════════════════════════════════════════════════════
+
+# Core scientific computing (required for all scripts)
+numpy>=1.20
+scipy>=1.7
+
+# CLASS Boltzmann code (required for class_verification_v4.py only)
+# Exact version 3.3.4 for bit-level reproducibility
+# If this exact version is not available, see CLASS_INSTALL.md
+# for source installation instructions.
+classy==3.3.4
+
+# Optional: for matplotlib plots
+matplotlib>=3.5
+
+# Tested on:
+#   Ubuntu 24.04 LTS, Python 3.12
+#   numpy 2.1, scipy 1.14, classy (CLASS v3.3.4)
