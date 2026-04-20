@@ -1,0 +1,68 @@
+========================================================================
+  Singh 2026t — COMPLETE VERIFICATION
+  Particle Size from Trapped Vibration
+  Mandeep Singh | 20 April 2026 | Speed Gap Framework
+========================================================================
+
+  #    Result           CM value       Measured       Error    Status     Ch  
+  ──────────────────────────────────────────────────────────────────────
+  1    E(He⁺)           54.416 eV      54.418 eV      0.0039 % VERIFIED   5   
+  2    α⁻¹              137.045        137.036        0.0063 % OBSERVED   5   
+  3    a₀ (Bohr)        52921.1 fm     52917.7 fm     0.0063 % VERIFIED   5   
+  4    E(Li²⁺)          122.436 eV     122.454 eV     0.0149 % VERIFIED   5   
+  5    E(Be³⁺)          217.664 eV     217.719 eV     0.0255 % VERIFIED   5   
+  6    E(H)             13.604 eV      13.598 eV      0.0439 % VERIFIED   5   
+  7    E(C⁵⁺)           489.743 eV     489.993 eV     0.0510 % VERIFIED   5   
+  8    E(Ne⁹⁺)          1360.4 eV      1362.2 eV      0.1323 % VERIFIED   5   
+  9    R_p (proton)     0.881 fm       0.877 fm       0.4492 % DERIVED    3   
+  10   R_π (pion)       0.668 fm       0.659 fm       1.3414 % OBSERVED   4   
+  11   R_n (neutron)    0.880 fm       0.862 fm       2.0565 % DERIVED    3   
+
+  ═══ EXPLICIT FAILURES ═══
+
+  System         Predicted    Measured     Error      Reason                        
+  ──────────────────────────────────────────────────────────────────────────────
+  Δ(1232)        0.6709       0.840           -20.1%  Resonance (10⁻²⁴ s)           
+  K±             0.1888       0.560           -66.3%  Strange quark, different wall 
+  ρ(770)         0.1202       0.750           -84.0%  Vector meson + resonance      
+  J/ψ            0.0301       0.250           -88.0%  Heavy charm quarks            
+  Deuteron       0.4407       2.142           -79.4%  Two-body, not single sphere   
+  He-4           0.2218       1.670           -86.7%  Multi-nucleon system          
+  Electron       1617.5402    0.001        +161753915.9%  Point particle, no structure  
+
+========================================================================
+  SCORECARD
+========================================================================
+
+  Total results:     11
+  All pass (<5%):    11/11
+  Best match:        0.0039% (E(He⁺))
+  Worst match:       2.0565% (R_n (neutron))
+  
+  Classification:
+    DERIVED  (blind prediction):  2
+    OBSERVED (pattern match):     2
+    VERIFIED (cross-check):       7
+  
+  Explicit failures:              7 (all with identified reasons)
+  
+  Free parameters:                ZERO
+  
+  Framework inputs:
+    ℏc = 197.3269804 MeV·fm        (CODATA)
+    m_p = 938.27208816 MeV              (CODATA)
+    m_n = 939.56542052 MeV              (CODATA)
+    m_e = 0.51099895 MeV              (CODATA)
+    m_π = 139.57039 MeV             (PDG 2024)
+    (4/3)π = 4.18879           (D=3 geometry)
+    e^(-3/4) = 0.47237            (confinement transmission)
+    G = 13.3982                   (geometric coupling)
+
+  ─── KEY FORMULAS ───
+  Base equation:  E = mc² = hf = (4/3) × hc/(2R)
+  Baryon size:    R = (4/3)π × ℏ/(mc)
+  Meson size:     R = e^(-3/4) × ℏ/(mc)
+  α formula:      α = (π²/OE + D/(4π)) × m_e/m_p
+  α-free Bohr:    E = (m_e³c²/2m_p²) × G² × Z²/n²
+
+========================================================================
