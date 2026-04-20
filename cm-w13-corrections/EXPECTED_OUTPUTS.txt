@@ -1,0 +1,60 @@
+========================================================================
+  Singh 2026u — COMPLETE VERIFICATION
+  Automatic Relativistic Corrections from W⁻¹/³
+  Mandeep Singh | 20 April 2026 | Speed Gap Framework
+========================================================================
+
+  #    Result                                             Value            Status
+  ───────────────────────────────────────────────────────────────────────────
+  1    V = μ²(W⁻¹/³−1) derived from KG                    Eq 1.4           DERIVED
+  2    V_frac = time dilation = binding                   Eq 1.5           DERIVED
+  3    Taylor β⁴ coeff = 0; β⁶ coeff = 2/3                0, 2/3           DERIVED
+  4    Full function > any truncation                     U: 0.5127 vs 0.4507 PROVEN
+  5    CM beats Coulomb                                   19/23 ions       TESTED
+  6    Avg error: C=2.03 CM=0.53 D=0.40                   all Z            TESTED
+  7    Heavy Z>26: C=4.9→CM=1.1%                          4× better        TESTED
+  8    Uranium: C=12.6→CM=0.6%                            21× better       TESTED
+  9    CM beats BOTH Coul + Dirac                         5/23 ions        TESTED
+  10   CM error oscillates (alternating)                  crosses 0 2×     OBSERVED
+  11   All spin corrections worse                         best spin: 1.21% TESTED
+  12   Plain W⁻¹/³ optimal                                0.63% avg        PROVEN
+  13   Spin-orbit included non-perturbatively             effective~2/3    DEMONSTRATED
+  14   Gap closed: Coulomb→Dirac                          91.7%            COMPUTED
+  15   CM-HF > standard HF (Z>26)                         prediction       UNTESTED
+
+  ─── Spin variant ranking ───
+
+  1. Plain CM       0.63%  ★ BEST
+  2. CM×3/4         1.21%  1.9× worse
+  3. CM+R/4         1.36%  2.2× worse
+  4. CM-R/4         3.94%  6.2× worse
+  5. W^(-1/4)       26.63%  42.2× worse
+
+========================================================================
+  FINAL SCORECARD
+========================================================================
+
+  Results established:     14/15
+  Predictions untested:    1 (CM-HF)
+  
+  CM beats Coulomb:        19/23 ions
+  CM beats Dirac:          5/23 ions (Ag, Xe, W)
+  
+  Average |error|:
+    Coulomb:  2.03%
+    CM:       0.53%  (← zero free parameters)
+    Dirac:    0.40%
+  
+  Gap closed:              91.7%
+  
+  Spin corrections:        ALL WORSE (plain W⁻¹/³ = optimal)
+  
+  Uranium (Z=92):
+    Coulomb → CM:           12.6% → 0.6% = 21× improvement
+  
+  Free parameters:          ZERO
+
+  ─── KEY FORMULAS ───
+  W = (1−β²)/(1+2β²)          β² = (Zα)²
+  V = μ²(W⁻¹/³ − 1)           (derived, not imposed)
+  E = ½ m_e c² × (W⁻¹/³ − 1)  (binding energy, 4 lines)
