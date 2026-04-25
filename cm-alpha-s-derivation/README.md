@@ -1,4 +1,3 @@
-
 cm-alpha-s-derivation
 Verification code for: Singh 2026v — "The Strong Coupling Constant from Clausius-Mossotti Geometry: Two Derivations, Zero Parameters"
 DOI: 10.5281/zenodo.19740577
@@ -9,9 +8,9 @@ Method
 α_s (QCD)
 Match
 Interior field eq (quarks, 1 GeV)
-0.474
+0.496
 0.47 ± 0.04
-0.9%
+5.4%
 Transmission formula (1 GeV)
 0.462
 0.47 ± 0.04
