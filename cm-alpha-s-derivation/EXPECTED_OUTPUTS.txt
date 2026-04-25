@@ -1,0 +1,64 @@
+EXPECTED OUTPUTS â€” Singh 2026v Verification Code
+================================================
+
+Paper: "The Strong Coupling Constant from Clausius-Mossotti Geometry"
+DOI: 10.5281/zenodo.19740577
+
+All tests should print "ALL TESTS PASSED".
+
+
+verify_alpha_s.py
+-----------------
+Derivation 1: Î±_s(E) = e^(-3/4) Ã— (m_p/E)^(1/3)
+  Î±_s(1 GeV)   = 0.462  (QCD 0.470, err 1.6%)
+  Î±_s(31.6 GeV) = 0.146  (QCD 0.142, err 2.6%)
+  Average error = 14.5%
+
+Derivation 2: OE(E) = (3/4)âˆš(â„c/(EÃ—R_p))
+  Î±_s(1.78 GeV) = 0.328  (QCD 0.330, err 0.5%)
+  Î±_s(91 GeV)   = 0.113  (QCD 0.118, err 4.4%)
+  Average error = 8.1%
+
+
+verify_barycenter.py
+--------------------
+  r_bary = 28.82 fm = 32.7 R_p
+  Î²Â² = Î±Â²(m_p/m_e) = 0.09774 â‰ˆ 1/10 (2.3%)
+  OE = 1/4, W = 3/4
+  Wall: OE=3/4, W=1/4 â†’ EXACT SWAP
+  Î±_s = 1/âˆš10 = 0.3162 (QCD 0.330, err 4.2%)
+
+
+verify_lambda_qcd.py
+--------------------
+  OEÃ—W max at OE = 1/2
+  Maximum = 1/(D+1) = 1/4
+  Î›_QCD = m_p/4 = 234.6 MeV (QCD range 200â€“340 MeV)
+  b quark at peak (OE=1/2)
+  s and t mirror: both 175.9 MeV = 3m_p/16
+
+
+interior_field_eq.py
+--------------------
+  Equation: OE' = OE(-OE/3 + 2/rÂ²)
+  Wall (r/Rp=1.0): OE = 0.750, Î±_s = 0.707
+  u quark (r/Rp=0.874): OE â‰ˆ 0.58, Î±_s â‰ˆ 0.52
+  d quark (r/Rp=0.694): OE â‰ˆ 0.33, Î±_s â‰ˆ 0.37
+  Centre (r/Rp=0.0): OE = 0.000, Î±_s = 0.000 (vacuum!)
+  
+  Weighted (2u+1d): OE_avg â‰ˆ 0.4941
+  Î±_s(quarks) â‰ˆ 0.496 (QCD 0.470, err 5.4%)
+  
+  Note: converged with scipy RK45, rtol=1e-12.
+  All tolerances (1e-6 to 1e-12) give same answer.
+
+
+INPUTS (zero fitted)
+--------------------
+  m_p = 938.272 MeV    (PDG 2024)
+  m_e = 0.511 MeV      (PDG 2024)
+  R_p = 0.881 fm       (CODATA 2018)
+  Î± = 1/137.036        (CODATA 2018)
+  â„c = 197.327 MeVÂ·fm  (CODATA 2018)
+  D = 3                 (spatial dimensions)
+  p = e^(-3/4) = 0.4724 (derived from D=3)
