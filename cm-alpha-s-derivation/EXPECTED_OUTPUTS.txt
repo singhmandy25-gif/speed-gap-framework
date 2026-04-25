@@ -42,15 +42,15 @@ interior_field_eq.py
 --------------------
   Equation: OE' = OE(-OE/3 + 2/rÂ²)
   Wall (r/Rp=1.0): OE = 0.750, Î±_s = 0.707
-  u quark (r/Rp=0.874): OE â‰ˆ 0.52, Î±_s â‰ˆ 0.51
-  d quark (r/Rp=0.694): OE â‰ˆ 0.17, Î±_s â‰ˆ 0.26
+  u quark (r/Rp=0.874): OE â‰ˆ 0.58, Î±_s â‰ˆ 0.52
+  d quark (r/Rp=0.694): OE â‰ˆ 0.33, Î±_s â‰ˆ 0.37
   Centre (r/Rp=0.0): OE = 0.000, Î±_s = 0.000 (vacuum!)
   
-  Weighted (2u+1d): OE_avg â‰ˆ 0.40â€“0.47
-  Î±_s(quarks) â‰ˆ 0.474 (QCD 0.470, err 0.9%)
+  Weighted (2u+1d): OE_avg â‰ˆ 0.4941
+  Î±_s(quarks) â‰ˆ 0.496 (QCD 0.470, err 5.4%)
   
-  Note: exact values depend on numerical step size.
-  With dr = -0.00002 fm: OE_avg â‰ˆ 0.4655, Î±_s = 0.474
+  Note: converged with scipy RK45, rtol=1e-12.
+  All tolerances (1e-6 to 1e-12) give same answer.
 
 
 INPUTS (zero fitted)
