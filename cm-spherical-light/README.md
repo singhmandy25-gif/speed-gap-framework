@@ -1,7 +1,7 @@
 cm-spherical-light
 Reproducibility folder for Singh 2026w: "Spherical Light: Wavelength as Sphere Size, Redshift as Dilution, and the Universal Rule m × R = n × ħc"
 Paper
-DOI: (to be assigned upon Zenodo upload)
+DOI: 10.5281/zenodo.19819345
 Date: 27 April 2026
 Author: Mandeep Singh (ORCID: 0009-0003-7176-2395)
 What This Folder Contains
