@@ -1,0 +1,69 @@
+Rp = 0.8809 fm, Re = 1.618 pm
+mp/me = 1836.15259
+Re/Rp = 1836.15259
+Error = 0.000000%
+PASS
+
+R_int = 1.618 pm, R_orb = 52.92 pm
+R_orb/R_int = 32.7149
+3/(4πα)     = 32.7149
+Difference  = 7.11e-15
+PASS (algebraically exact)
+
+  OE+W=1: PASS
+  dark=0: PASS
+  bright=4x: PASS
+  energy: PASS
+  bounds: PASS
+
+5/5 PASS
+
+A(Fe) predicted = 56.13
+A(Fe) measured  = 56
+Error = 0.2%
+PASS
+
+ΔA (r₀=1.08) = 0.788
+6(Zα)² = 0.216
+Sum = 1.004
+Match to 1: 0.4%
+
+With r₀=1.25: sum = 1.033 (3.3% from 1)
+
+Predicted: √2 × 52.9177 = 74.84 pm
+Measured: 74.14 pm
+Error: 0.9%
+PASS
+
+Particle   l    Pred     Meas     Err      Status
+Kaon       0    1.396    1.401    0.3     % PASS
+rho        1    2.793    2.868    2.6     % PASS
+Proton     2    4.189    4.170    0.4     % PASS
+Delta      3    5.585    5.244    6.5     % PASS
+J/psi      4    6.981    6.905    1.1     % PASS
+
+Pion: R/λ = 0.4661, e^(-3/4) = 0.4724, err = 1.3%
+
+Step-by-step:
+  m_u = me×(4/3)π = 2.14 MeV (PDG 2.16, err 0.9%)
+  m_d = m_u×e^(3/4) = 4.53 MeV (PDG 4.67, err 3.0%)
+
+Ratio test (genuine result):
+  m_s/m_d = 20.00
+  e³ = 20.09
+  Error = 0.4%
+
+With PDG m_d: m_s = 93.8 (err 0.4%)
+With pred m_d: m_s = 91.0 (err 2.6%)
+
+f₀ = 2.27e+23 Hz, T₀ = 4.41e-24 s, f₀×T₀ = 1.0000
+
+Position     f            T(paper)     1/f          f×T      OK?
+d quark      6.81e+23     1.47e-24     1.47e-24     1.0011   ✓
+midpoint     3.03e+23     3.30e-24     3.30e-24     0.9999   ✓
+u quark      1.70e+23     5.88e-24     5.88e-24     0.9996   ✓
+wall         7.57e+22     1.32e-23     1.32e-23     0.9992   ✓
+
+f(d)/f(wall) = 9.0 (should be 9)
+
+ALL PASS
