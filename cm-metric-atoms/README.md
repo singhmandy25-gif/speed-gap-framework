@@ -1,7 +1,7 @@
 cm-metric-atoms/
 Verification scripts for Singh 2026z:
 "From Quantum Potential to Atomic Structure: Seven Derived Results in D=3 Geometry"
-Paper DOI: (to be assigned upon Zenodo upload)
+Paper DOI: https://doi.org/10.5281/zenodo.20254897
 Author: Mandeep Singh | ORCID: 0009-0003-7176-2395
 Scripts
 File
